@@ -71,9 +71,9 @@ pipeline{
                 sh """
 		    echo $WORKSPACE
 		    mv target/*.war target/javawebapplication.war
-                    scp -o StrictHostKeyChecking=no target/javawebapplication.war  ec2-user@172.31.36.194:/opt/tomcat8/webapps/
-                    ssh ec2-user@172.31.36.194 /opt/tomcat8/bin/shutdown.sh
-                    ssh ec2-user@172.31.36.194 /opt/tomcat8/bin/startup.sh
+                    scp -o StrictHostKeyChecking=no target/javawebapplication.war  ec2-user@172.31.38.132:/opt/tomcat8/webapps/
+                    ssh ec2-user@172.31.38.132 /opt/tomcat8/bin/shutdown.sh
+                    ssh ec2-user@172.31.38.132 /opt/tomcat8/bin/startup.sh
                 
                 """
                 }
